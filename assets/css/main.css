@@ -1,0 +1,197 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+ overflow-x: hidden;
+}
+
+  
+  html, a, input {
+    background-color: black;
+    cursor: none!important;
+  
+  }
+  html{
+    width: 100%;
+    scroll-behavior:smooth
+  }
+
+
+  
+  #cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  #cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(255, 0, 0);
+    pointer-events: none !important;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out;
+    height: 0.15s ease-out;
+    background-color: 0.15s ease-out;
+    z-index: 9999;
+  }
+  
+  
+  
+
+  .navlink {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #ffffff;
+    transition: 0.3s ease-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .navlink:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  
+  .navlink:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  
+ 
+  
+  
+  
+  
+/* 
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  
+  .container {
+    display: flex;
+    /* Fonctionne avec toutes les tailles */
+    width: 100vw;
+    position: absolute;
+    top: 120px;
+    transform: translateY(-50%);
+    /* pour rotate on enlève le translate et on rajoute le rotate */
+    /* transform:  rotate(90deg);    */
+  }
+  .txt {
+    white-space: nowrap;
+    font-size: 50px;
+    animation: scrollTxt 30s linear infinite;
+  
+  }
+  
+  /* .t1 {
+    color: red;
+  }
+  .t2 {
+    color: blue;
+  } */
+  @keyframes scrollTxt {
+    0%{
+      transform: translate(-100%, 0);
+    }
+    100% {
+      transform: translate(0%, 0);
+    }
+  }
+
+  .positionbouton{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration-line: none ;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #ffffff;
+    transition: 0.3s ease-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+  }
+
+  .div1{
+    height: 700px;
+    transition-duration: 0.4s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+
+
+  .blocks img{
+    min-width: 100%;
+    transition: all .3s ease-in-out;
+  }
+
+  .blocks > div:hover img{
+    filter: blur(6px);
+  }
+
+  .textImg{
+   position: absolute;
+   z-index: 1000;   
+   opacity: 0;
+   transition: all .3s ease-in-out;
+   font-weight: 300;
+   font-size: 25px;
+   text-align: center;
+  }
+ 
+  .blocks div{
+    transition: all .3s ease-in-out;
+  }
+
+  .blocks > div:hover p{
+    opacity: 1;
+  }
+
+  .gradientbackground{
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+      from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
