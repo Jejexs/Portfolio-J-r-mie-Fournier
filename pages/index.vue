@@ -20,7 +20,7 @@
 
         <div class="text-white w-3/4 pt-6 pr-36 pb-6 pl-36" data-aos="fade-up" data-aos-offset="167" data-aos-delay="200" data-aos-duration="200">
           <fieldset style="border: solid white 2px" class="text-4xl pt-6 pb-6 pl-12">
-            <legend class="text-xl text-white pr-3 pl-2">LANGAGE DE PROGRAMMATIONtest</legend>
+            <legend class="text-xl text-white pr-3 pl-2">LANGAGE DE PROGRAMMATION</legend>
             <ul class="pl-20 pb-2">
               <li>
                 HTML
